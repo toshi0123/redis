@@ -1,7 +1,8 @@
 FROM alpine:edge
 
 RUN apk upgrade --no-cache && \
-    apk add --no-cache redis su-exec
+    apk add --no-cache redis su-exec && \
+    mkdir /data && chown redis:redis /data
 
 VOLUME /data
 
