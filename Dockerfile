@@ -13,4 +13,4 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 6379
 
-CMD ["redis-server"]
+CMD ["redis-server","--bind 0.0.0.0"]
