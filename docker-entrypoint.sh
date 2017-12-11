@@ -2,7 +2,7 @@
 
 chown -R redis .
 exec su-exec redis redis-server \
-  --bind `ip route | grep -v default | awk -F/ '/eth0/{print $1}'` \
+  --bind 0.0.0.0 \
   --dir ./ \
   --save 900 1 \
   --save 300 10 \
