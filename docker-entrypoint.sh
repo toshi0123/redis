@@ -1,4 +1,4 @@
 #!/bin/sh
 
 chown -R redis .
-exec su-exec redis "$0" "$@"
+exec su-exec redis "$@"
